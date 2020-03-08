@@ -37,9 +37,11 @@ The above program is the definition of spreadsheet "0".
 
 The first number under LBL 00 is the number of columns, the second is the number of rows. The 6 cells are then distributed like this in the spreadsheet:
 
-|Reg01 | Reg02
-|Reg03 | Reg04
-|Reg05 | Reg06
+Spreadsheet "0"
+----------------
+Reg01 | Reg02
+Reg03 | Reg04
+Reg05 | Reg06
 
 All the cells (labels) that are simple "input"-type cells (cells without any calculations) are grouped at the top (after LBL 00) and ends in a simple RTN (indicating no calculations for those cells). Cells that contain calculations (like LBL 04 and 06) contain the calculations as seen in the above example.
 
@@ -52,7 +54,6 @@ LBL B (-)		| Go to one cell lower and show the content
 LBL C (+R)      | Go to the cell in next row and show the content (stops at bottom row)
 LBL D (+)		| Go to one cell higher and show the content
 LBL E (V)		| View the content of the current cell (the cell number is in register Y)
-----------------|------------
 LBL a (A)		| Used for storing an Alpha value in a cell. Put up to 6 characters in Alpha, the cell number in X and press "a"
 LBL b (1)		| Go to first cell and show the content
 LBL c (-R)      | Go to the cell in higher row and show the content (stops at top row)
