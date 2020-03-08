@@ -64,3 +64,5 @@ If you have a spreadsheet saved when you start the main program, it will automat
 
 To show the content of each consequtive cells, run the main program and press "D" and the program will advance one cell at a time and show the content (cell number is always left in register Y), doing calculations for the cells as directed.
 
+## License
+This software is released into the Public Domain.
