@@ -37,8 +37,8 @@ The above program is the definition of spreadsheet "0".
 
 The first number under LBL 00 is the number of columns, the second is the number of rows. The 6 cells are then distributed like this in the spreadsheet:
 
-Spreadsheet "0" 
-------|--------
+Spreadsheet "0" |  
+------|-----------
 Reg01 | Reg02
 Reg03 | Reg04
 Reg05 | Reg06
