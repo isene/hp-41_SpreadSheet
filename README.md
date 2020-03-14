@@ -6,31 +6,34 @@ This program is an advancement of the spredsheet program "MicroCalc" created by 
 Each "cell" is an HP-41 register, starting with Register 01. Reg 00 is used by the program to hold the name of the current worksheet and the current cell. A spreadsheet is created by adding a new program labeled simply from 0 to 9 as an Alpha label. The spreadsheet with "LBL '0" (LBL Alpaha 0 Alpha) must hold as many numeric lables as there are cells in the spreadsheet in addition to a LBL 00 that holds the number of columns and rows in the spreadheet. Like this:
 
 ```
-LBL "0"
-LBL 00
-2
-3
-RTN
-LBL 01
-LBL 02
-LBL 03
-LBL 05
-RTN
-LBL 04
-RCL 01
-RCL 02
-*
-RTN
-LBL 06
-RCL 02
-X^2
-RCL 03
-SIN
-/
-RCL 05
-+
-RTN
-END
+001*LBL "0"		; This is the program for spreadsheet #0
+002 GTO IND X	; MUST ALWAYS BE THE FIRST LINE
+003 LBL 00		; Must always have a LBL 00 to define the spreadsheet
+004 2			; Two columns
+005 3			; Three rows
+006 RTN
+007 LBL 01		; Here comes the cells that are simple input cells
+008 LBL 02		; The labels correspond to the cells/registers that will hold their content
+009 LBL 03
+010 LBL 05
+011 RTN			; The input type cells (no formulas) all just end in a RTN
+012 LBL 04		; Here is a cell with a formula
+013 RCL 01
+014 RCL 02
+015 *     
+016 STO 04		; Remember to store the result in the cell/register 
+017 RTN   
+018 LBL 06		; Here is another cell with a formula
+019 RCL 02
+020 X^2   
+021 RCL 03
+022 SIN   
+023 /     
+024 RCL 05
+025 +     
+026 STO 06		; Remember to store the result in the cell/register 
+027 RTN			; Yeah, you can skip this RTN ASTO the END will return just nicely
+028 END 
 ```
 
 The above program is the definition of spreadsheet "0". 
