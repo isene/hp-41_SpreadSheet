@@ -48,6 +48,17 @@ Reg05  Reg06
 
 All the cells (labels) that are simple "input"-type cells (cells without any calculations) are grouped at the top (after LBL 00) and ends in a simple RTN (indicating no calculations for those cells). Cells that contain calculations (like LBL 04 and 06) contain the calculations as seen in the above example.
 
+Another example to clarify the concept: In a usual spreadsheet, cells are labled A1, B1, C1 across the columns and A1, A2, A3 down the rows. If a cell has a formula (cell A3 = A1 * A2), you first must realize that cell A1 is Register01 (R01) and in your spreadsheet program (for instance "0" - as in LBL"0") it corresponds to LBL 01 - A2 is R02/LBL02, A3 is R03/LBL03, etc. If A1 and A2 are simple input cells with no formulas, it would just have an RTN in your spreadsheet program (see example on the GitHub page), while A3 would have this in the spreadsheet program:
+
+```
+LBL 03
+RCL 01 ; get A1
+RCL 02 ; get A2
+* ; multiply
+STO 03 ; store the result into the cell register
+RTN
+```
+
 When you start the main program (XEQ "SHEET") you will be asked to enter the spreadsheet (a number from 0 to 9). You will then see the content of cell 1. Pressing R/S will show the mnemonics for the first row of User Defined Keys (keys A-E). Make sure you have USER pressed to get access to the User Defined Keys. Pressing R/S again shows the mnemonics for the shifted User Defined Keys (keys a-e). Pressing R/S again will get you back to showing the current cell's content. Any time the current cell content is shown, pressing R/S will show you the menu and another R/S will show the shifted menu. The mnemonics (in parenthesis) are:
 
 Label (Menu)    | Description
