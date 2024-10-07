@@ -25,5 +25,5 @@
 024 RCL 05
 025 +     
 026 STO 06		; Remember to store the result in the cell/register 
-027 RTN			; Yeah, you can skip this RTN ASTO the END will return just nicely
+027 RTN			; Yeah, you can skip this RTN as the END will return just nicely
 028 END 

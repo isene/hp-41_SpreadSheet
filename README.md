@@ -32,7 +32,7 @@ Each "cell" is an HP-41 register, starting with Register 01. Reg 00 is used by t
 024 RCL 05
 025 +     
 026 STO 06		; Remember to store the result in the cell/register 
-027 RTN			; Yeah, you can skip this RTN ASTO the END will return just nicely
+027 RTN			; Yeah, you can skip this RTN as the END will return just nicely
 028 END 
 ```
 
@@ -64,15 +64,15 @@ When you start the main program (XEQ "SHEET") you will be asked to enter the spr
 Label (Menu)    | Description
 ----------------|------------
 LBL A (#)		| Used for numeric input type cells: Input the cell number, then the numeric value and press A to store the value in that cell
-LBL B (-C)		| Go to one cell lower and show the content
-LBL C (+R)      | Go to the cell in next row and show the content (stops at bottom row)
-LBL D (+C)		| Go to one cell higher and show the content
+LBL B (-c)		| Go to one cell lower and show the content
+LBL C (+c)		| Go to one cell higher and show the content
+LBL D (+R)      | Go to the cell in next row and show the content (stops at bottom row)
 LBL E (V)		| View the content of the current cell (the cell number is in register Y). If you press a cell number and then "E", the current cell will be changed to this number and the content viewed (this is the way to jump to a certain cell)
-LBL a (A)		| Used for storing an Alpha value in a cell. Put up to 6 characters in Alpha, the cell number in X and press "a"
+LBL a (a)		| Used for storing an Alpha value in a cell. Put up to 6 characters in Alpha, the cell number in X and press "a"
 LBL b (1)		| Go to first cell and show the content
-LBL c (-R)      | Go to the cell in higher row and show the content (stops at top row)
-LBL d (E)		| Go to last cell and show the content
-LBL e (SAV)		| Save the spreadsheet (all cells, including Reg 00) to an XM file named the same as the spreadsheet program (number from 0 to 9)
+LBL c (E)		| Go to last cell and show the content
+LBL d (-R)      | Go to the cell in higher row and show the content (stops at top row)
+LBL e (RS)		| Regenerate & Save; Regenerate all cell contents (applying all formulas), then press R/S when prompted to save the spreadsheet (all cells, including Reg 00) to an XM file named the same as the spreadsheet program (number from 0 to 9)
 
 If you have a spreadsheet saved when you start the main program, it will automatically load the content of all the cells from that XM file.
 
