@@ -1,4 +1,10 @@
 # hp-41_SpreadSheet
+
+[![HP-41](https://img.shields.io/badge/HP--41-Calculator-orange)](https://en.wikipedia.org/wiki/HP-41C)
+[![License](https://img.shields.io/badge/License-Public%20Domain-brightgreen.svg)](https://unlicense.org/)
+[![GitHub stars](https://img.shields.io/github/stars/isene/hp-41_SpreadSheet.svg)](https://github.com/isene/hp-41_SpreadSheet/stargazers)
+[![Stay Amazing](https://img.shields.io/badge/Stay-Amazing-blue.svg)](https://isene.org)
+
 Want to have a spreadsheet on your HP-41 calculator? Here's a way.
 
 This program is an advancement of the spredsheet program "MicroCalc" created by Namir Shammas sometimes in the early 1980s (User program #01115C) - adding many features from the CX. It has the basic features you would expect from the usual spreadsheet programs (such as Excel) with any amount of calculations per cell that an HP-41 is capable of (an impressive lot) and the number of cells that you can fit into the calculator memory (in practical terms, a 100 cells).
