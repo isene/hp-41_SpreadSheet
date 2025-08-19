@@ -6,6 +6,7 @@
 [![Stay Amazing](https://img.shields.io/badge/Stay-Amazing-blue.svg)](https://isene.org)
 
 <img src="img/spreadsheet_logo.svg" align="left" width="150" height="150" alt="HP-41 SpreadSheet Logo">
+<br clear="left"/>
 
 Want to have a spreadsheet on your HP-41 calculator? Here's a way.
 
